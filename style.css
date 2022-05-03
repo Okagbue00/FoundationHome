@@ -1,0 +1,713 @@
+*{
+    box-sizing: border-box; /*to get spacing for the box size of the text*/
+}
+
+/*set the background color, padding and margin of the body of the website*/
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rebeccapurple;
+    font-family: 'Lora', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Lora', serif;
+    color: white;
+    margin: 5px;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    background: tan;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 1.08em;
+    font-family: sans-serif;
+}
+
+.btn-big{
+    padding: .9rem 1.5rem;
+    line-height: 1.5rem;
+}
+
+.btn:hover{
+    color: white !important;
+    background: #ccbba1;
+}
+
+/*navigation bar*/
+.text-input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    color: tan;
+    line-height: 1.5rem;
+    font-family: sans-serif;
+    border: 1px solid green;
+    font-size: 1.2em;
+}
+
+/*message validation styling*/
+
+.msg{
+    width:100%;
+    margin:5px auto;
+    padding:10px;
+    border-radius:5px;
+    list-style:none;
+}
+
+.success{
+    color: green;
+    border: 1px solid green;
+    background: rebeccapurple;
+}
+
+.error{
+    color: darkred;
+    border: 1px solid darkred;
+    background: #de5353;
+}
+
+
+
+/*the header of the element*/
+header{
+    background: tan;
+    height: 66px;
+}
+
+/* the logo of the html element is drawn at the left*/
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+    /*border: 1px solid red;*/
+
+}
+
+header .logo-text{
+    margin: 8px;
+    font-family: 'Emilys Candy', cursive;
+}
+
+header .logo-text span{
+    color: #4baf70;
+}
+
+header ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*border: 1px solid red;*/ /*so it will be easier to view the header correctly*/
+
+}
+
+
+
+header ul li{
+    float: left; /**float to left to assume a horizontal display*/
+    position: relative;
+}
+
+/*for the navigation drop down meu*/
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0;
+    width: 180px;
+    display: none;
+    z-index: 888888;
+
+}
+
+/*is to make the property of the menu to appear(for dashboard and logout)*/
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li{
+    width: 100%;
+}
+header ul li ul li a.logOut{
+    color: red;
+}
+header ul li ul li a:hover{
+    background: antiquewhite;
+}
+
+
+/*for the dashboard icon navigation*/
+header ul li ul li a {
+    padding: 10px;
+    background: burlywood;
+    color: blanchedalmond;
+}
+
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none; /*to remove underlying from the text header...*/
+}
+
+header ul li a:hover{
+    background: #b0aba4; /*the color to set for when the header is been navigated*/
+    transition: 0.5s; /*is the timing for navigating through the header..*/
+}
+
+/*displays the menu toggler to not show yet*/
+header .menu-toggle{
+    display: none;
+}
+
+
+.page-wrapper a:hover{
+    color: tan;
+
+}
+
+.page-wrapper{
+    min-height: 100%;
+}
+
+/*for the post slider styler*/
+.post-slider{
+    position: relative;
+    /*border: 1px solid red;*/
+
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+
+}
+
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.post-slider .next{
+
+    position: absolute;
+    top: 50%;
+    left: inherit;
+    right: 30px;
+    font-size: 2em;
+    color: greenyellow;
+    cursor: pointer;
+
+
+
+}
+
+.post-slider .prev{
+    position: absolute;
+
+    top: 50%;
+    left: 30px;
+    content: "";
+    right: inherit;
+    font-size: 2em;
+    color: greenyellow;
+    cursor: pointer;
+
+}
+
+.post-slider .post-wrapper .post{
+    height: 380px;
+    width: 300px;
+    margin: 0 10px;
+    display: inline-block;
+    background: rebeccapurple;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0 5px;
+    /*border: 1px solid red;*/
+}
+
+/*make every element in the header to display green color*/
+header * {
+    color: green;
+
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+}
+
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+
+}
+
+.content .main-content{
+    width: 70%;
+    float: left;
+
+}
+
+.content .main-content .single .post-title{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.content .main-content.single{
+    background: tan;
+    color: rebeccapurple;
+    font-size: 1em;
+    padding: 20px 60px;
+    border-radius: 7px;
+}
+
+.content .main-content .post {
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: rebeccapurple;
+    position: relative;
+
+}
+
+.content .popular .post{
+    border-top: 1px solid red;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+.content .popular .post img{
+    height: 55px;
+    width: 55px;
+    float: left;
+    margin-right: 10px;
+}
+
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-top: 1px solid tan;
+    background: transparent;
+    border-radius: 0;
+    color: tan !important;
+}
+
+.content .main-content .post .read-more:hover{
+    background: #a6640c;
+    color: white;
+    transition: .25s;
+}
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+
+}
+
+
+
+.content clearfix .main-content .post .post-preview{
+    width: 60px;
+    padding: 1px;
+    float: right;
+    overflow: hidden;
+}
+
+.content  .main-content .recent-post-title{
+    margin: 20px;
+}
+
+
+.content .sidebar{
+    width: 30%;
+    float: left;
+
+
+}
+
+.content .sidebar.single{
+    padding: 20px;
+}
+
+/*side bar contents*/
+.content  .sidebar .section{
+    background-color: greenyellow;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom:20px;
+
+}
+
+.content  .sidebar .section .section-title{
+    margin: 10px 0 10px 0;
+
+}
+
+.content  .sidebar .section.search{
+    margin-top: 80px;
+
+}
+
+.content  .sidebar .section.topics ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid grey;
+}
+
+.content .sidebar .section.topics ul li a{
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid grey;
+    transition: all 0.3s;
+}
+
+.content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+
+/*AUTH PAGES */
+
+.auth-content{
+    width: 40%;
+    margin: 50px auto;
+    padding: 23px;
+    background-color: rebeccapurple;
+    border-radius: 6px;
+
+}
+
+.auth-content .form-title{
+    text-align: center;
+}
+.auth-content form div{
+    margin-bottom : 12px;
+
+}
+
+.auth-content form p {
+    text-align: center;
+}
+.auth-content form p a {
+    text-decoration: underline;
+}
+
+/*Footer styling*/
+.footer{
+    background: #cb8787;
+    color: gold;
+    height: 400px;
+    position: relative;
+}
+
+.footer .footer-content{
+    /*border-top: 1px solid red;*/
+    height: 350px;
+    display: flex;
+
+}
+.footer .footer-content .footer-section{
+    flex: 1;
+    padding: 25px;
+    /*border: 1px solid green;*/
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2{
+    color: green;
+
+}
+
+.footer .footer-content .about h1 span{
+    color: #4baf70;
+}
+
+.footer .footer-content .about .contact span{
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+
+}
+
+.footer .footer-content .about .socials a{
+    border-bottom: 1px solid gold;
+    width: 45px;
+    height: 41px;
+    padding-top: 8px;
+    margin-right: 7px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 6px;
+    transition: all .56s;
+}
+
+.footer .footer-content .about .socials a:hover{
+    border: 1px solid tan;
+    color: tan;
+    transition: all .56s;
+}
+
+.footer .footer-content .links ul a {
+    display: block;
+    margin-bottom: 12px;
+    font-size:  1.4em;
+}
+
+.footer .footer-content .links ul a:hover{
+    color: tan;
+    margin-left: 19px;
+    transition: all .53s;
+}
+
+
+
+.footer .footer-bottom {
+    background: #b68484;
+    color: firebrick;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+
+.footer .footer-content .contact-form .contact-input{
+    background: #cb8787;
+    color: white;
+    margin: 12px;
+    line-height: 1.9rem;
+    padding: .9rem 1.5rem;
+
+}
+
+.footer .footer-content .contact-form .contact-input:focus{
+    background: #e3a4a4;
+}
+
+.footer .footer-content .contact-form .contact-btn{
+    float: right;
+    font-size: 1.3em;
+
+}
+
+
+
+/*it defines the media queries for when the user resizes the page*/
+@media only screen and (max-width: 934px){
+
+    .content {
+        width: 100%;
+
+    }
+
+    .auth-content{
+        width: 55%;
+    }
+
+    .content .main-content{
+        width: 100%;
+
+    }
+
+    .content .main-content .post {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content .sidebar{
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    .content  .sidebar .section.search{
+        margin-top: 30px;
+    }
+
+    .footer{
+        height: auto;
+
+    }
+
+    .footer .footer-content{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer .footer-content .contact-form{
+        padding-bottom: 80px;
+    }
+
+    .footer .footer-content .contact-form .contact-btn{
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 770px){
+
+    header{
+        position: relative;
+    }
+
+    .auth-content{
+        width: 60%;
+    }
+
+    .main-content-wrapper{
+        padding: 13px;
+    }
+
+    header ul{
+        width: 100%;
+        background: #d3bba8;
+        max-height: 0px;
+        overflow: hidden; /*would hid the overflown objects*/
+
+
+    }
+    .showing{
+        max-height:  100em;
+
+    }
+
+    header ul li{
+        width: 100%;
+    }
+    /*for the navigation drop down meu*/
+    header ul li ul{
+        position: static;
+        display: block;
+        width: 100%;
+
+    }
+
+    header ul li ul li a {
+        padding: 10px;
+        background: burlywood;
+        color: blanchedalmond;
+        padding-left: 50px;
+    }
+
+    header ul li ul li a:hover{
+        background: black;
+    }
+
+    header ul li ul li a.logOut{
+        color: red;
+    }
+
+    header .menu-toggle{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 1.9em;
+    }
+
+    header .logo {
+        margin-left: .5em;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+    .content .main-content .post .post-image{
+        width: 100%;
+    }
+
+    .auth-content{
+        width: 90%;
+    }
+
+    .content .main-content.single{
+
+        padding: 10px 20px;
+
+    }
+
+    .content clearfix .main-content .post .post-preview{
+        width: 100%;
+    }
+
+    .content .main-content .post {
+
+        height: auto;
+
+    }
+
+    .content .main-content .post .read-more{
+        position: static;
+        width: 100%;
+        display: block;
+        text-align: center;
+        background: #5fc0a4;
+    }
+
+    .post-slider .next{
+
+
+        right: 15px;
+
+
+    }
+
+    .post-slider .prev{
+
+        left: 15px;
+
+    }
+
+
+}
+

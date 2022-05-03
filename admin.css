@@ -1,0 +1,81 @@
+header{
+    background: #bdaf9e;
+}
+.admin-wrapper{
+    display: flex;
+
+    /*border: 1px solid red;*/
+    height: calc(100% - 66px);
+}
+
+.admin-wrapper .left-sidebar{
+    flex: 2;
+    height: 100%;
+    background: darkblue;
+}
+
+.admin-wrapper .left-sidebar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: tan;
+}
+
+.admin-wrapper .left-sidebar ul li a{
+    padding: 20px;
+    display: block;
+    border: 1px solid blue;
+}
+
+.admin-wrapper .left-sidebar ul li a:hover{
+    background: blue;
+}
+
+
+
+.admin-wrapper .admin-content{
+    flex: 8; /*to display horizontally; to occupy 80% of the space.*/
+    height: 100%;
+    padding: 35px 90px 90px;
+    overflow-y: scroll; /*it means the ability to scroll when there is more data*/
+
+}
+
+.admin-content .page-title{
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+}
+
+th, td{
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.edit{
+    color: blue;
+
+}
+
+.delete{
+    color: red;}
+
+.publish{
+    color: tan;
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover{
+    text-decoration: underline;
+}
+
+form div{
+    margin-bottom: 20px;
+}

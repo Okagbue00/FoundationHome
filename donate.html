@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome kits-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Lora&display=swap" rel="stylesheet">
+    <!-- Styling the custom page-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Single Post</title>
+</head>
+<body>
+<!--facebook plugin page the sdk -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="6X2PystZ"></script>
+<header>
+    <div class="logo">
+
+        <h1 class="logo-text"> <span>Francis</span>Foundation</h1>
+
+
+
+    </div>
+    <!-- For navigation bar-->
+
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Services</a></li>
+        <li><a href="index.html">Donate</a></li>
+        <!-- <li><a href="#">Sign Up</a></li>
+         <li><a href="#">Login</a></li> -->
+        <li>
+            <a href="index.html"> <i class="fa fa-user"></i>Francis Foundation <i class="fa fa-chevron-down" style="font-size: .6em;"></i> </a>
+            <ul style="left: 60px;">
+                <li><a href="#">DashBoard</a></li>
+                <li><a href="#" class="logOut">LogOut</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+<!--is a page wrapper for surrounding all the contents in the website -->
+
+<div class="page-wrapper">
+
+
+    <div class="content">
+
+        <iframe width="420" height="345" src="http://www.youtube.com/embed/UzLqDsSqJHU" allowfullscreen>
+        </iframe>
+
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/dd4wgz-christmas-meal-for-the-homeless/widget/large/"></div>
+
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/community-fridges-toronto-winterization-2021/widget/large/"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h1 class="logo-text"><span>Francis</span>Foundation</h1>
+            <p>Francis Foundation is a blog created for cmpt353 final project.</p>
+
+            <div class="contact">
+                <span><i class="fas fa-phone"></i> &nbsp; 123-123-123</span>
+                <span><i class="fas fa-envelope"></i> &nbsp; info@francisfoundation.com</span>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <br>
+            <ul>
+                <a href="#"><li>Events</li></a>
+                <a href="#"><li>Team</li></a>
+                <a href="#"><li>Gallery</li></a>
+                <a href="#"><li>Terms and Conditions</li></a>
+                <a href="#"><li>FAQS</li></a>
+                <a href="#"><li>Donate</li></a>
+
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-section contact-form">
+            <h2>Contact Us</h2>
+            <br>
+            <form action="index.html" method="post">
+                <input type="email" name="email" class="text-input contact-input" placeholder="Your Email address..">
+                <textarea rows="2" name="message" class="text-input contact-input" placeholder="Your message."></textarea>
+                <button type="submit" class="btn btn-big contact-btn"> <i class="fas fa-envelope"></i>Send </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        &copy; Francis Foundation | Designed by Team Francis Foundation Care
+    </div>
+</div>
+
+<!--footer ends-->
+
+
+<!--JQuery script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Slick Carousel -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<!--the custom script -->
+
+<script>
+    $(document).ready(function(){
+        $('.menu-toggle').on('click', function(){
+            $('.nav').toggleClass('showing');
+            $('.nav li').toggleClass('showing');
+
+        });
+
+        $('.post-wrapper').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            nextArrow: $('.next'),
+            prevArrow: $('.prev'),
+
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+
+
+
+        });
+
+
+
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+

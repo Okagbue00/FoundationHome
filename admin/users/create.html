@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome kits-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Lora&display=swap" rel="stylesheet">
+    <!-- Styling the custom page-->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <title>Admin Blog - Add Users</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1 class="logo-text"> <span>Francis</span>Foundation</h1>
+    </div>
+    <!-- For navigation bar-->
+
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+
+        <li>
+            <a href="#"> <i class="fa fa-user"></i>Francis Foundation <i class="fa fa-chevron-down" style="font-size: .6em;"></i> </a>
+            <ul style="left: 60px;">
+
+                <li><a href="#" class="logOut">LogOut</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+<!--is an admin page wrapper for surrounding all the contents in the website -->
+
+<div class="admin-wrapper">
+
+    <!--left sidebar -->
+    <div class="left-sidebar">
+        <ul>
+            <li><a href="../posts/index.html">Manage Posts</a></li>
+            <li><a href="index.html">Manage Users</a></li>
+            <li><a href="../topics/index.html">Manage Topic</a></li>
+        </ul>
+
+    </div>
+
+    <!--Admin contents -->
+    <div class="admin-content">
+        <div class="button-group">
+            <a href="create.html" class="btn btn-big">Add User</a>
+            <a href="index.html" class="btn btn-big">Manage Users</a>
+
+        </div>
+
+        <div class="content">
+
+            <h2 class="page-title">Add User</h2>
+
+            <form action="create.html" method="post">
+
+                <div>
+                        <label>* Username</label>
+                        <input type="text" name="username" class="text-input">
+                    </div>
+                    <div>
+                        <label>* Email</label>
+                        <input type="text" name="email" class="text-input">
+                    </div>
+
+                    <div>
+                        <label>* Password</label>
+                        <input type="text" name="password" class="text-input">
+                    </div>
+
+                    <div>
+                        <label>* Password Confirmation</label>
+                        <input type="text" name="passwordConf" class="text-input">
+
+                    </div>
+
+                <div>
+                    <label>Role</label>
+                    <select name="topic" class="text-input">
+                        <option value="Admin">Admin</option>
+                        <option value="Author">Author</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-big">Add Topic</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!--JQuery script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--ckeditor for the add post -->
+<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+
+
+<!--the custom script -->
+
+<script>
+    $(document).ready(function() {
+        $('.menu-toggle').on('click', function () {
+            $('.nav').toggleClass('showing');
+            $('.nav li').toggleClass('showing');
+
+        });
+    });
+
+    ClassicEditor
+        .create( document.querySelector( '#body' ), {
+            toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+            heading: {
+                options: [
+                    { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                    { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                    { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+                ]
+            }
+        } )
+        .catch( error => {
+            console.log( error );
+        } );
+
+
+</script>
+
+</body>
+</html>
+

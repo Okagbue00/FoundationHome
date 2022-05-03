@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome kits-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Lora&display=swap" rel="stylesheet">
+  <!-- Styling the custom page-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Login</title>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <h1 class="logo-text"> <span>Francis</span>Foundation</h1>
+  </div>
+  <!-- For navigation bar-->
+
+  <i class="fa fa-bars menu-toggle"></i>
+  <ul class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Donate</a></li>
+    <!-- <li><a href="#">Sign Up</a></li>
+     <li><a href="#">Login</a></li> -->
+    <li>
+      <a href="#"> <i class="fa fa-user"></i>Francis Foundation <i class="fa fa-chevron-down" style="font-size: .6em;"></i> </a>
+      <ul style="left: 60px;">
+        <li><a href="#">DashBoard</a></li>
+        <li><a href="#" class="logOut">LogOut</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
+
+<div class="auth-content">
+
+  <form action="login.html" method="post">
+    <h2 class="form-title">Login</h2>
+
+    <div>
+      <label>* Username</label>
+      <input type="text" name="username" class="text-input">
+    </div>
+
+    <div>
+      <label>* Password</label>
+      <input type="text" name="password" class="text-input">
+    </div>
+
+
+    <div>
+      <button type="submit" name="register-btn" class="btn btn-big">Login</button>
+
+    </div>
+
+
+    <p>Or <a href="register.html">Sign Up</a></p>
+  </form>
+</div>
+
+
+<!--JQuery script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<!--the custom script -->
+
+<script>
+  $(document).ready(function(){
+    $('.menu-toggle').on('click', function(){
+      $('.nav').toggleClass('showing');
+      $('.nav li').toggleClass('showing');
+
+    });
+
+    $('.post-wrapper').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: $('.next'),
+      prevArrow: $('.prev'),
+
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+
+
+
+    });
+
+
+
+  });
+</script>
+
+</body>
+</html>
+
+
